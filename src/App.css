@@ -1,0 +1,100 @@
+body {
+  background-color: rgba(108, 106, 106, 0.1);
+}
+
+/* styling paper */
+.paper {
+  /* width: 600px; */
+  height: 800px;
+  position: relative;
+  /* margin: 20px auto; */
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px #888;
+}
+
+/* styling red vertical line */
+.paper::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  background-color: rgba(255,0,0,0.6);
+}
+
+/* styling blue horizontal lines */
+.pattern {
+  height: 100%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+}
+
+/* styling text content */
+.content {
+  padding-top: 6px;
+  padding-left: 56px;
+  padding-right: 16px;
+  line-height: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  font-weight: 600;
+  /* text-decoration: underline; */
+} 
+
+.paragraph {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+/* typewriter */
+.typewriter-div {
+  width: fit-content;
+}
+
+.typewriter {
+  overflow: hidden; 
+  border-right: .15em solid orange;
+  white-space: nowrap; 
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* end typewriter */
+.button-1div {
+  display: flex;
+}
+
+.button-1 {
+  cursor: pointer;
+}
+
+.form {
+  margin: 0;
+  padding: 0;
+}
+
+.form input {
+  margin: 0;
+  padding: 0;
+}
