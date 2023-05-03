@@ -4,10 +4,8 @@ body {
 
 /* styling paper */
 .paper {
-  /* width: 600px; */
-  height: 800px;
+  height: 700px;
   position: relative;
-  /* margin: 20px auto; */
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: white;
@@ -50,11 +48,20 @@ body {
   font-size: 18px;
   margin: 0;
   padding: 0;
+  margin-left: 40px;
+}
+.paragraph-two {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin-left: 45px;
 }
 
 /* typewriter */
 .typewriter-div {
   width: fit-content;
+  margin-left: 45px;
 }
 
 .typewriter {
@@ -97,4 +104,50 @@ body {
 .form input {
   margin: 0;
   padding: 0;
+}
+
+.img-quotes {
+  width: 40px;
+  height: 40px;
+}
+
+.div-showPath {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.img-document {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 35px;
+}
+
+.img-walk {
+  width: 43px;
+  height: 43px;
+  position: absolute;
+  top: -15px;
+}
+
+.img-clock {
+  width: 43px;
+  height: 43px;
+  position: absolute;
+}
+
+.to-show {
+  /* AGREGAR ANIMATION PARA QUE APAREZCA CON EASE */
+}
+
+.div-surprise {
+  position: absolute;
+  right: 40px;
+}
+
+.img-surprise {
+  width: 70px;
+  cursor: pointer;
+  /* AGREGAR ANIMACION PARA QUE BOUNCEE */
 }
