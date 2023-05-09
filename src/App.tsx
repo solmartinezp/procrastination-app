@@ -5,6 +5,7 @@ import Walk from './assets/wired-lineal-646-walking-walkcycle-person.gif';
 import Pencil from './assets/wired-lineal-35-edit.gif';
 import Clock from './assets/wired-lineal-236-alarm-clock.gif';
 import Gift from './assets/wired-lineal-412-gift.gif';
+import SurpriseModal from './components/Modal/Surprise';
 import './App.css';
 
 type FormElement = React.FormEvent<HTMLFormElement>;
@@ -83,7 +84,7 @@ function App(): JSX.Element {
       date: "3 semanas"
     }
   ]);
-  const [deadlineToShow, setDeadlineToShow] =  useState<IDeadline>({
+  const [deadlineToShow, setDeadlineToShow] = useState<IDeadline>({
     date: ''
   });
 
@@ -96,7 +97,7 @@ function App(): JSX.Element {
   };
 
   const addPath = (title: string) => {
-    const newPaths: IPath[] = [...listOfPaths, {title }];
+    const newPaths: IPath[] = [...listOfPaths, { title }];
     setListOfPaths(newPaths);
   }
 
@@ -106,20 +107,24 @@ function App(): JSX.Element {
 
   const handleSeePaths = () => {
     const length = listOfPaths.length;
-    
+
     const id = Math.floor(Math.random() * length);
 
     setPathToShow(listOfPaths[id]);
     setShowPath(true);
   };
 
-  const handleReset = () => {
-    setShowPath(false);
+  const handleReset = (v: string) => {
+    if (v === 'path') {
+      setShowPath(false);
+    } else if (v === 'date') {
+      setShowDeadline(false);
+    }
   };
 
   const handleSeeDeadline = () => {
     const length = listOfDeadlines.length;
-    
+
     const id = Math.floor(Math.random() * length);
 
     setDeadlineToShow(listOfDeadlines[id]);
@@ -130,106 +135,118 @@ function App(): JSX.Element {
     setVisible(true);
   }
 
+  const hideModal = () => {
+    setVisible(false);
+  }
+
   return (
     <div className="paper">
-    <div className="pattern">
-      <div className="content">
+      <div className="pattern">
+        <div className="content">
 
-      {/* SORPRESA */}
-      <div className="div-surprise" onClick={handleSurprise}>
-        <img src={Gift} alt="gift" className="img-surprise" />
-      </div>
-      {/* DIV ABSOLUTE */}
-
-      <img src={EditDocument} alt="edit-document" className="img-document" />
-      <div className="typewriter-div">
-        <div className="typewriter">
-          Herramienta anti-procrastinación:
-        </div>
-      </div>
-    <br/>
-
-    {/* BOTÓN PARA ELEGIR UN CAMINO */}
-    <div>
-      <div className="div-showPath">
-        <img src={Walk} alt="walk" className="img-walk" />
-        <p className="paragraph">¿Qué camino voy a seguir para encarar este proyecto?</p>
-      </div>
-      <br/>
-      <div className="button-1div">
-        <button onClick={handleSeePaths} className="button-1">
-          {showPath && pathToShow.title !== '' ? (
-            <>
-              Mmm...quiero otro
-            </>
-          ): (
-            <>
-              A ver
-            </>
-          )}
-        </button>
-
-        <button onClick={handleReset} className="button-1">
-          Reset
-        </button>
-      </div>
-
-      <br/>
-      <div>
-        {showPath ? (
-          <div className="div-showPath">
-            <img src={Quote} alt="quotes" className="img-quotes" />
-
-            <h3 className='to-show'>{pathToShow.title}</h3>
-
+          {/* SORPRESA */}
+          <div className="div-surprise" onClick={handleSurprise}>
+            <img src={Gift} alt="gift" className="img-surprise" />
           </div>
-        ): null}
-      </div>
-    </div>
+          {/* DIV ABSOLUTE */}
 
-    {/* CAMINO PERSONALIZADO */}
-    <div>
-      <div className="div-showPath">
-        <img src={Pencil} alt="pencil" className="img-walk" />
-        <p className="paragraph">
-          Agregá un camino extra:
-        </p>
-      </div>
+          {/* MODAL SORPRESA */}
+          <SurpriseModal visible={visible} hide={hideModal} />
 
-      <br/>
-      <form onSubmit={handleSubmit} className="form">
-        <input
-          type="text"
-          value={newPath}
-          onChange={e => handleChange(e.target.value)}
-        />
+          <img src={EditDocument} alt="edit-document" className="img-document" />
+          <div className="typewriter-div">
+            <div className="typewriter">
+              Herramienta anti-procrastinación:
+            </div>
+          </div>
+          <br />
 
-        <button>
-          Guardar
-        </button>
-      </form>
-    </div>
+          {/* BOTÓN PARA ELEGIR UN CAMINO */}
+          <div>
+            <div className="div-showPath">
+              <img src={Walk} alt="walk" className="img-walk" />
+              <p className="paragraph">¿Qué camino voy a seguir para encarar este proyecto?</p>
+            </div>
+            <br />
+            <div className="button-1div">
+              <button onClick={handleSeePaths} className="button-1">
+                {showPath && pathToShow.title !== '' ? (
+                  <>
+                    Mmm...quiero otro
+                  </>
+                ) : (
+                  <>
+                    A ver
+                  </>
+                )}
+              </button>
 
-    <br/>
+              <button onClick={() => handleReset('path')} className="button-1">
+                Reset
+              </button>
+            </div>
 
-    {/* DEADLINE */}
-    <div>
-      <div className="div-showPath">
-        <img src={Clock} alt="clock" className="img-clock" />
-        <div>
-          <p className="paragraph-two">¿Necesitás un plazo de días para meterte presión?</p>
-          <p className="paragraph-two">Apretá el botón recibir para una fecha aleatoria</p>
-        </div>
-      </div>
+            <br />
+            <div>
+              {showPath ? (
+                <div className="div-showPath2">
+                  <img src={Quote} alt="quotes" className="img-quotes" />
 
-      <button onClick={handleSeeDeadline}>Deadline</button>
+                  <h3 className='to-show'>{pathToShow.title}</h3>
 
-      {showDeadline ? (
-        <div className="div-showPath">
-          <h4 className="to-show">{deadlineToShow.date}</h4>
-        </div>
-      ): null}
-    </div>
+                </div>
+              ) : null}
+            </div>
+          </div>
+
+          {/* CAMINO PERSONALIZADO */}
+          <div>
+            <div className="div-showPath">
+              <img src={Pencil} alt="pencil" className="img-walk" />
+              <p className="paragraph">
+                Agregá un camino extra:
+              </p>
+            </div>
+
+            <br />
+            <form onSubmit={handleSubmit} className={showPath ? "form" : "form2"}>
+              <input
+                type="text"
+                value={newPath}
+                onChange={e => handleChange(e.target.value)}
+              />
+
+              <button className="button-1">
+                Guardar
+              </button>
+            </form>
+          </div>
+
+          <br />
+
+          {/* DEADLINE */}
+          <div>
+            <div className="div-showPath">
+              <img src={Clock} alt="clock" className="img-clock" />
+              <div>
+                <p className="paragraph-two">¿Necesitás un plazo de días para meterte presión?</p>
+                <p className="paragraph-two">Apretá el botón recibir para una fecha aleatoria</p>
+              </div>
+            </div>
+
+            <div className={showPath ? "button-2noDiv": "button-2div"}>
+              <button onClick={handleSeeDeadline} className="button-1">Deadline</button>
+              <button onClick={() => handleReset('date')} className="button-1">
+                Reset
+              </button>
+            </div>
+
+            {showDeadline ? (
+              <div className={showPath ? "div-noShowPath3" : "div-showPath3"}>
+                <h4 className="to-show">{deadlineToShow.date}</h4>
+              </div>
+            ) : null}
+          </div>
         </div>
       </div >
     </div >
