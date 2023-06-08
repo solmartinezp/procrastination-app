@@ -1,0 +1,354 @@
+body {
+  background-color: rgba(108, 106, 106, 0.1);
+}
+
+/* styling paper */
+.paper {
+  height: 700px;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px #888;
+}
+
+/* styling red vertical line */
+.paper::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+/* styling blue horizontal lines */
+.pattern {
+  height: 100%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+}
+
+/* styling text content */
+.content {
+  padding-top: 6px;
+  padding-left: 56px;
+  padding-right: 16px;
+  line-height: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  font-weight: 600;
+  /* text-decoration: underline; */
+}
+
+.paragraph {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin-left: 40px;
+}
+
+.paragraph-two {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin-left: 45px;
+}
+
+/* typewriter */
+.typewriter-div {
+  width: fit-content;
+  margin-left: 45px;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange;
+  }
+}
+
+/* end typewriter */
+.button-1div {
+  display: flex;
+  position: relative;
+  top: -6px;
+}
+
+.button-2div {
+  display: flex;
+  position: relative;
+  top: 13px;
+}
+
+.button-2noDiv {
+  display: flex;
+  position: relative;
+  top: 16px;
+}
+
+.button-1 {
+  background: none;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 5px 10px 5px 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  outline: inherit;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  background-color: rgb(154, 169, 237);
+  border-radius: 15px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.form {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -6px;
+  left: 15px;
+}
+
+.form2 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -10px;
+  left: 15px;
+}
+
+.form input {
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  border-color: rgb(87, 86, 86);
+  border-width: 1px;
+  height: 20px;
+}
+
+.form2 input {
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  border-color: rgb(87, 86, 86);
+  border-width: 1px;
+  height: 20px;
+}
+
+.img-quotes {
+  width: 40px;
+  height: 40px;
+}
+
+.div-showPath {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.div-showPath2 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-duration: 0s;
+  animation-delay: 0s;
+}
+
+.div-showPath3 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 15px;
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-duration: 0s;
+  animation-delay: 0s;
+}
+
+.div-noShowPath3 {
+  display: flex;
+  top: 20px;
+  margin-left: 20px;
+  flex-direction: row;
+  position: relative;
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-duration: 0s;
+  animation-delay: 0s;
+}
+
+.img-document {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 35px;
+}
+
+.img-walk {
+  width: 43px;
+  height: 43px;
+  position: absolute;
+  top: -15px;
+}
+
+.img-clock {
+  width: 43px;
+  height: 43px;
+  position: absolute;
+}
+
+.to-show {
+  /* AGREGAR ANIMATION PARA QUE APAREZCA CON EASE */
+}
+
+.div-surprise {
+  position: absolute;
+  right: 40px;
+}
+
+.div-surprise:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+.img-surprise {
+  width: 70px;
+  cursor: pointer;
+  /* AGREGAR ANIMACION PARA QUE BOUNCEE */
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
