@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/procrastination-app/static/css/main.ba2f0cef.css",
+    "main.js": "/procrastination-app/static/js/main.ed30f6f9.js",
+    "static/js/787.eaaeaf5d.chunk.js": "/procrastination-app/static/js/787.eaaeaf5d.chunk.js",
+    "static/media/wired-lineal-1534-paper-boat.gif": "/procrastination-app/static/media/wired-lineal-1534-paper-boat.fdb0e26e2197546ffaa7.gif",
+    "static/media/wired-lineal-646-walking-walkcycle-person.gif": "/procrastination-app/static/media/wired-lineal-646-walking-walkcycle-person.b37ad7047c27fde5c37c.gif",
+    "static/media/wired-lineal-1822-dandelion.gif": "/procrastination-app/static/media/wired-lineal-1822-dandelion.50d1a23351bc48f0d9b5.gif",
+    "static/media/wired-lineal-1827-growing-plant.gif": "/procrastination-app/static/media/wired-lineal-1827-growing-plant.5cbfc59be33e505b8ac1.gif",
+    "static/media/wired-lineal-245-edit-document.gif": "/procrastination-app/static/media/wired-lineal-245-edit-document.bb264c0f6e9ad399b670.gif",
+    "static/media/wired-lineal-412-gift.gif": "/procrastination-app/static/media/wired-lineal-412-gift.034ce8010c8936a5106a.gif",
+    "static/media/wired-lineal-236-alarm-clock.gif": "/procrastination-app/static/media/wired-lineal-236-alarm-clock.f392ee0f8dd82975ace4.gif",
+    "static/media/wired-lineal-41-quotation-mark-second.gif": "/procrastination-app/static/media/wired-lineal-41-quotation-mark-second.3e814cfdaf91f442ceff.gif",
+    "static/media/wired-lineal-35-edit.gif": "/procrastination-app/static/media/wired-lineal-35-edit.2d6952b420bc93779da2.gif",
+    "static/media/WhatsApp Image 2023-05-09 at 18.22.33.jpeg": "/procrastination-app/static/media/WhatsApp Image 2023-05-09 at 18.22.33.7f50c28dc8c0e9e5d8f9.jpeg",
+    "index.html": "/procrastination-app/index.html",
+    "main.ba2f0cef.css.map": "/procrastination-app/static/css/main.ba2f0cef.css.map",
+    "main.ed30f6f9.js.map": "/procrastination-app/static/js/main.ed30f6f9.js.map",
+    "787.eaaeaf5d.chunk.js.map": "/procrastination-app/static/js/787.eaaeaf5d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba2f0cef.css",
+    "static/js/main.ed30f6f9.js"
+  ]
+}
