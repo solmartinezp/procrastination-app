@@ -49,6 +49,9 @@ function App(): JSX.Element {
     {
       title: 'El camino más innovador.'
     },
+    {
+      title: 'El camino que seguiría Sol.'
+    },
   ]);
   const [showPath, setShowPath] = useState<boolean>(false);
   const [pathToShow, setPathToShow] = useState<IPath>({
