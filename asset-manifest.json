@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/procrastination-app/static/css/main.ba2f0cef.css",
-    "main.js": "/procrastination-app/static/js/main.ed30f6f9.js",
+    "main.css": "/procrastination-app/static/css/main.675accda.css",
+    "main.js": "/procrastination-app/static/js/main.ab2e9d57.js",
     "static/js/787.eaaeaf5d.chunk.js": "/procrastination-app/static/js/787.eaaeaf5d.chunk.js",
     "static/media/wired-lineal-1534-paper-boat.gif": "/procrastination-app/static/media/wired-lineal-1534-paper-boat.fdb0e26e2197546ffaa7.gif",
     "static/media/wired-lineal-646-walking-walkcycle-person.gif": "/procrastination-app/static/media/wired-lineal-646-walking-walkcycle-person.b37ad7047c27fde5c37c.gif",
@@ -14,12 +14,12 @@
     "static/media/wired-lineal-35-edit.gif": "/procrastination-app/static/media/wired-lineal-35-edit.2d6952b420bc93779da2.gif",
     "static/media/WhatsApp Image 2023-05-09 at 18.22.33.jpeg": "/procrastination-app/static/media/WhatsApp Image 2023-05-09 at 18.22.33.7f50c28dc8c0e9e5d8f9.jpeg",
     "index.html": "/procrastination-app/index.html",
-    "main.ba2f0cef.css.map": "/procrastination-app/static/css/main.ba2f0cef.css.map",
-    "main.ed30f6f9.js.map": "/procrastination-app/static/js/main.ed30f6f9.js.map",
+    "main.675accda.css.map": "/procrastination-app/static/css/main.675accda.css.map",
+    "main.ab2e9d57.js.map": "/procrastination-app/static/js/main.ab2e9d57.js.map",
     "787.eaaeaf5d.chunk.js.map": "/procrastination-app/static/js/787.eaaeaf5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba2f0cef.css",
-    "static/js/main.ed30f6f9.js"
+    "static/css/main.675accda.css",
+    "static/js/main.ab2e9d57.js"
   ]
 }
