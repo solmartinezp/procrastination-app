@@ -352,3 +352,63 @@ body {
   }
 }
 
+@media (max-width: 750px) {
+  .typewriter-div {
+    width: 50%;
+  }
+
+  .typewriter {
+    /* overflow: hidden; */
+    border-right: .15em solid orange;
+    white-space: wrap;
+    /* margin: 0 auto; */
+    /* letter-spacing: .15em; */
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret .75s infinite;
+  }
+}
+
+@media (max-width: 550px) {
+  .typewriter-div {
+    width: 70%;
+
+  }
+
+  .typewriter {
+    border-right: .15em solid orange;
+    white-space: wrap;
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret .75s infinite;
+  }
+}
+
+@media (max-width: 470px) { 
+  .div-surprise {
+    right: 10px;
+    bottom: 100px;
+  }
+}
+
+@media (max-width: 469px) { 
+  .typewriter-div {
+    width: 85%;
+  }
+}
+
+@media (max-width: 360px) { 
+  .typewriter-div {
+    width: 100%;
+    margin-left: -5px;
+  }
+
+  .img-document{
+    display: none;
+  }
+
+  .div-surprise {
+    right: 10px;
+    bottom: 20px;
+  }
+}
